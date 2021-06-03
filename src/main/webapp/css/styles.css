@@ -1,0 +1,440 @@
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;;
+}
+
+/************************** HEADER **************************/
+
+.header-container {
+  padding: 25px;
+  text-align: center;
+  background: #04AA6D;
+  font-size: 1.5rem;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  line-height: none;
+}
+
+
+.header_title  {
+  font-family: 'Rock Salt', cursive;
+  grid-column: 2;
+}
+
+.header_title a {
+  background: -webkit-linear-gradient(white, grey);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/************************** NAVBAR **************************/
+
+
+/************* TABLAS ***************/
+
+.container_tablas {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-top: 4px solid black;
+  margin-top: 10px;
+  background: #DCDCDC;
+}
+
+
+.top10_peliculas {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 75%;
+  margin: auto;
+  margin-top: 10px;
+  grid-column: 1;
+}
+
+.top10_series {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 75%;
+  margin: auto;
+  margin-top: 10px;
+  grid-column: 2;
+}
+
+@media (max-width: 992px) {
+  .container_tablas {
+    grid-template-columns: 100%;
+  }
+
+  .top10_peliculas {
+    grid-column: auto;
+    
+  }
+
+  .top10_series {
+    grid-column: auto;
+  }
+}
+
+caption {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+.top10_series tr:hover {
+  background-color: #ddd;
+}
+
+.top10_peliculas tr:hover {
+  background-color: #ddd;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+table {
+	caption-side: top;
+}
+
+/******************** NOTICIAS ***********************/
+
+.titulo_noticias {
+  text-align: center;
+  border-bottom: 4px solid black;
+  border-top: 4px solid black;
+  background-color: blanchedalmond;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container_noticias {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.noticias_1 {
+  grid-column: 1;
+  width: 90%;
+  margin: auto;
+}
+
+.noticias_2 {
+  grid-column: 2;
+  width: 90%;
+  margin: auto;
+}
+
+.noticias_3 {
+  grid-column: 3;
+  width: 90%;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+	.container_noticias {
+	grid-template-columns: 100%
+	}
+	.noticias_1 {
+	grid-column: auto;
+	}
+	.noticias_2 {
+	grid-column: auto;
+	}
+	.noticias_3 {
+	grid-column: auto;
+	}
+}
+
+
+/************* REGISTRO ******************/
+
+.registro_container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.formulario_container {
+  grid-column: 1;
+  padding: 2%;
+  width: 65%;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  background-color: lightgray;
+  box-shadow: 5px 5px grey;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+h1#titulo_registro {
+  margin-top: -10px;
+  text-align: center;
+}
+
+.boton_registro {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.formulario_container label {
+  margin-left: 10px;
+}
+
+.boton_registro:hover {
+  opacity:1;
+}
+
+.info_container {
+  grid-column: 2;
+  padding: 2%;
+  width: 65%;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  background-color: lightgray;
+  box-shadow: 5px 5px grey;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.login_container {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 1px;
+}
+
+.asterisco {
+  color: red;
+}
+
+p#mensajeregistro {
+	text-align: center;
+	background: indianred;
+	margin-top: 5px;
+}
+
+p#terminosycondiciones {
+	text-align: center;
+}
+
+
+@media (max-width: 992px) {
+	.registro_container {
+	grid-template-columns: 100%;
+	}
+	
+	.info_container {
+	display: none;
+	}
+	
+	.formulario_container {
+	width: 80%;
+	}
+}
+
+/************* PERFIL ***************/
+
+.user_info {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  background-color: cadetblue;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+
+.user_avatar {
+  grid-column: 1;
+  padding: 25px;
+  margin: auto;
+}
+
+.user_avatar img {
+  border-radius: 30%;
+}
+
+.user_name {
+  background-color: lightgray;
+  grid-column: 2;
+  width: 50%;
+  height: 75%;
+  margin-top: 10px;
+  padding: 5px;
+  padding-left: 50px;
+  box-shadow: 4px 4px grey;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 1.5rem;
+  width: 50%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+.valorar_peliculas {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 35px;
+}
+
+.valorar_series {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 35px;
+}
+
+
+.peliculas_valoradas {
+  width: 80%;
+  margin: auto;
+}
+
+.series_valoradas {
+  width: 80%;
+  margin: auto;
+}
+
+#peliculas_titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: -15px;
+}
+
+#series_titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: -15px;
+}
+
+#Home {
+  background-color: lightgray;
+}
+
+#News {
+  background-color: lightgray;
+}
+
+/*********** PANEL CONTROL ****************/
+
+.tabla_usuarios {
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 75%;
+}
+
+.filtro_usuarios {
+	width: 75%;
+	margin: auto;
+	margin-top: 25px;
+}
+
+img.avatar {
+	width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+/************* FOOTER ***************/
+.container-footer {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 100%;
+  margin-top: 10px;
+  background-color: #04AA6D;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+.info {
+  grid-column: 1;
+  padding-left: 15px;
+}
+
+.rrss {
+  grid-column: 2;
+  text-decoration: none;
+  padding-bottom: 15px;
+  text-align: center;
+  
+}
+
+.mediaIcons {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.fa-facebook-square {
+  color: #3b5998;
+  margin-right: 10px;
+}
+
+.fa-twitter-square {
+  color: #00acee;
+}
+
+.fa-instagram-square {
+  color: #E1306C;
+  margin-right: 10px;
+}
+
