@@ -1,6 +1,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">LogoHere</a>
+            <a class="navbar-brand" href="#">Welcome to Addicted.TO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mob-navbar" aria-label="Toggle">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,7 +22,7 @@
                 <form class="d-flex">
                     <input class="form-control me-2" type="text" placeholder="Username" />
                     <input class="form-control me-2" type="password" placeholder="Password" />
-                    <button class="btn btn-warning" type="submit">Login</button>
+                    <button class="btn btn-light" type="submit">Login</button>
                 </form>
             </div>
         </div>
