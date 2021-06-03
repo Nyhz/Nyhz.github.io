@@ -16,7 +16,7 @@
 	</form>
    	</div>
    
-    <div class="tabla_usuarios_container">
+    <div class="table-responsive-lg">
         <table class="tabla_usuarios">
             <caption>Lista de usuarios</caption>
             <tr>

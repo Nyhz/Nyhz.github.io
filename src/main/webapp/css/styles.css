@@ -42,7 +42,7 @@ html {
   grid-template-columns: 50% 50%;
   border-top: 4px solid black;
   margin-top: 10px;
-  background: #DCDCDC;
+  padding-bottom: 25px;
 }
 
 
@@ -215,6 +215,8 @@ h1#titulo_registro {
 
 .formulario_container label {
   margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .boton_registro:hover {
