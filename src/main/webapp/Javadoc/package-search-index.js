@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.elorrieta.proyectofinal.connectionhelper"},{"l":"com.elorrieta.proyectofinal.controladores"},{"l":"com.elorrieta.proyectofinal.dao"},{"l":"com.elorrieta.proyectofinal.modelo"}];updateSearchResults();

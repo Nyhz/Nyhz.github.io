@@ -105,4 +105,70 @@ public class UsuarioDAO {
 		return coleccion;
 	}
 
+	public static Usuario getById(int id) {
+
+		Usuario u = null;
+		String sql = "SELECT id, user_name, user_password, user_email, user_avatar, rol, fecha_creacion FROM usuarios WHERE id = ?; ";
+
+		try (Connection con = ConnectionHelper.getConnection(); PreparedStatement pst = con.prepareStatement(sql)) {
+
+			pst.setInt(1, id);
+			try (ResultSet rs = pst.executeQuery()) {
+
+				while (rs.next()) {
+
+					u = new Usuario();
+
+					u.setId(rs.getInt("id"));
+					u.setUser_name(rs.getString("user_name"));
+					u.setUser_password(rs.getString("user_password"));
+					u.setUser_email(rs.getString("user_email"));
+					u.setUser_avatar(rs.getString("user_avatar"));
+					u.setRol(rs.getInt("rol"));
+					u.setFecha_creacion(rs.getString("fecha_creacion"));
+
+				}
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return u;
+	}
+
+	public static boolean update(Usuario u) throws Exception {
+		boolean modificado = false;
+		String sql = "UPDATE usuarios SET user_name = ?, user_password = ?, user_email = ?, rol = ? WHERE id = ?;";
+		try (Connection con = ConnectionHelper.getConnection(); PreparedStatement pst = con.prepareStatement(sql)) {
+
+			pst.setString(1, u.getUser_name());
+			pst.setString(2, u.getUser_password());
+			pst.setString(3, u.getUser_email());
+			pst.setInt(4, u.getRol());
+			pst.setInt(5, u.getId());
+
+			if (pst.executeUpdate() == 1) {
+				modificado = true;
+			}
+
+		}
+
+		return modificado;
+	}
+
+	public static boolean delete(int id) throws Exception {
+
+		boolean eliminado = false;
+		String sql = "DELETE FROM usuarios WHERE id = ?;";
+		try (Connection con = ConnectionHelper.getConnection(); PreparedStatement pst = con.prepareStatement(sql)) {
+
+			pst.setInt(1, id);
+			if (pst.executeUpdate() == 1) {
+				eliminado = true;
+			}
+
+		}
+		return eliminado;
+	}
 }

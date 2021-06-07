@@ -18,6 +18,9 @@
                     <li class="nav-item">
                         <a class="nav-link ${ (param.page eq 'usuarios') ? 'active' : '' }" href="usuarios?page=usuarios">Panel Control</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Javadoc/index.html">JavaDoc</a>
+                    </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="text" placeholder="Username" />

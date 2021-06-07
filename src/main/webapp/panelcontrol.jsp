@@ -37,11 +37,26 @@
                 <td>${pIteracion.user_email}</td>
                 <td>${pIteracion.rol}</td>
                 <td>${pIteracion.fecha_creacion}</td>
-                <td>EDITAR</td>
-                <td>ELIMINAR</td>
+	            <td><a href="usuario-editar?id=${pIteracion.id}"><i class="fas fa-edit"></i></a></td>
+	            <td><a onclick="confirmarEliminacion('${pIteracion.user_name}')" href="usuario-eliminar?id=${pIteracion.id}"><i class="far fa-trash-alt"></i></a></td>
                </tr>
             </c:forEach>
            </table>
-       </div>
+           
+       <script>
+      	
+      	function confirmarEliminacion(nombre){
+      		
+      		if ( window.confirm("¿ Quieres Eliminar a " + nombre + " ?") ){
+      			console.debug('Eliminamos');
+      		}else {
+      			event.preventDefault(); // prevenir que el ancla haga su funcion
+      			console.debug('No Eliminamos');
+      		}
+      		
+      	}
+      
+      </script>
+      </div>
    </main>
 <jsp:include page="plantillas/footer.jsp"/>

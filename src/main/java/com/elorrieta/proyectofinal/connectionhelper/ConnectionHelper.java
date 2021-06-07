@@ -3,6 +3,13 @@ package com.elorrieta.proyectofinal.connectionhelper;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+/**
+ * Clase para obtener conexion a la BDD de SQLite.
+ * 
+ * @author Nyhz
+ * @version 1.0
+ *
+ */
 public class ConnectionHelper implements AutoCloseable {
 
 	private static Connection con = null;

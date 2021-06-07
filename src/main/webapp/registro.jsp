@@ -4,27 +4,75 @@
 <jsp:include page="plantillas/header.jsp"/>
 <jsp:include page="plantillas/navbar.jsp"/>
 
-
     <main>
         <div class="registro_container">
             <div class="formulario_container">
-                <form action="usuarios" method="post">
-                    <h1 id="titulo_registro">Registro</h1>
+                <form action="usuario-editar" method="post">
+                
+                    <h1 id="titulo_registro">${ ( usuarios.id == null ) ? 'Registro' : 'Editar' }</h1>
+                    
+                    <label for="id">${ ( usuarios.id == null ) ? '' : 'ID' }</label>
+                    <input class="registroform" 
+                    type="${ ( usuarios.id == null ) ? 'hidden' : 'text' }"
+                    name="id" 
+                    id="id"
+                    value="${usuarios.id}"
+                    readonly>
+                    
+                    <label for="rol">${ ( usuarios.id == null ) ? '' : 'Rol' }</label><br>
+                    <input class="registroform" 
+                    type="${ ( usuarios.id == null ) ? 'hidden' : 'text' }"
+                    name="rol" 
+                    id="rol"
+                    value="${usuarios.rol}">
+                    
                     <label for="user_name">Nombre de usuario<span class="asterisco">*</span></label>
-                    <input class="registroform" type="text" placeholder="Introduce nombre de usuario" name="user_name" id="user_name" required>
+                    <input class="registroform" 
+                    type="text" 
+                    placeholder="Introduce nombre de usuario" 
+                    name="user_name" 
+                    id="user_name"
+                    value="${usuarios.user_name}"
+                    required>
 
                     <label for="user_email">Email<span class="asterisco">*</span></label>
-                    <input class="registroform" type="text" placeholder="Introduce Email" name="user_email" id="user_email" required>
+                    <input class="registroform" 
+                    type="text" 
+                    placeholder="Introduce Email" 
+                    name="user_email" 
+                    id="user_email"
+                    value="${usuarios.user_email}"
+                    required>
 
                     <label for="user_password">Contraseña<span class="asterisco">*</span></label>
-                    <input class="registroform" type="password" placeholder="Introduce contraseña" name="user_password" id="user_password" required>
+                    <input class="registroform" 
+                    type="password" 
+                    placeholder="Introduce contraseña" 
+                    name="user_password" 
+                    id="user_password"
+                    value="${usuarios.user_password}"
+                    required>
 
                     <label for="user_password_repeat">Repite contraseña<span class="asterisco">*</span></label>
-                    <input class="registroform" type="password" placeholder="Repite contraseña" name="user_password_confirm" id="user_password_confirm" required>
+                    <input class="registroform" 
+                    type="password" 
+                    placeholder="Repite contraseña" 
+                    name="user_password_confirm" 
+                    id="user_password_confirm"
+                    value="${usuarios.user_password}"
+                    required>
+                    
+                    <label for="user_avatar">Avatar</label>
+                    <input class="registroform" 
+                    type="text" 
+                    placeholder="Link a tu avatar (opcional)" 
+                    name="user_avatar" 
+                    id="user_avatar"
+                    value="${usuarios.user_avatar}">
 
 					<p id="mensajeregistro">${mensaje}</p>
                     <p id="terminosycondiciones">Al crear tu cuenta aceptas nuestros <a href="#">Términos y condiciones</a>.</p>
-                    <button type="submit" id="submit" class="boton_registro"> Registro </button>
+                    <button type="submit" id="submit" class="boton_registro">${ ( usuarios.id == null ) ? 'Registro' : 'Editar' }</button>
                 </form>
 
                 <div class="login_container">
