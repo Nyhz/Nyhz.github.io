@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Welcome to Addicted.TO</a>
@@ -9,24 +10,50 @@
                     <li class="nav-item">
                         <a class="nav-link ${ (param.page eq 'index') ? 'active' : '' }" aria-current="page" href="index?page=index">Home</a>
                     </li>
+                    
+                     <!--  VISIBLE SOLO PARA NO REGISTRADOS -->
+                    <c:if test="${usuario_logeado == null}">
                     <li class="nav-item">
                         <a class="nav-link ${ (param.page eq 'registro') ? 'active' : '' }" href="registro.jsp?page=registro">Registro</a>
                     </li>
+                    </c:if>
+                    
+                    <!--  VISIBLE SOLO PARA USERS NORMALES -->
+                    <c:if test="${usuario_logeado.rol > 0}">
                     <li class="nav-item">
-                        <a class="nav-link ${ (param.page eq 'perfil') ? 'active' : '' }" href="perfil.jsp?page=perfil">Mi perfil</a>
+                        <a class="nav-link ${ (param.page eq 'perfil') ? 'active' : '' }" href="perfil?page=perfil">Mi perfil</a>
                     </li>
+                    </c:if>
+                    
+                     <!--  VISIBLE SOLO PARA ADMINS -->
+                    <c:if test="${usuario_logeado.rol == 1}">
                     <li class="nav-item">
                         <a class="nav-link ${ (param.page eq 'usuarios') ? 'active' : '' }" href="usuarios?page=usuarios">Panel Control</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Javadoc/index.html">JavaDoc</a>
                     </li>
+                    </c:if>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="text" placeholder="Username" />
-                    <input class="form-control me-2" type="password" placeholder="Password" />
+                
+                <c:if test="${usuario_logeado == null}">
+                <form class="d-flex" action="login" method="post">
+                    <input class="form-control me-2" type="text" name="user_name" id="user_name" placeholder="Username" />
+                    <input class="form-control me-2" type="password" name="user_password" id="user_name" placeholder="Password" />
                     <button class="btn btn-light" type="submit">Login</button>
                 </form>
+                </c:if>
+                
+                <c:if test="${usuario_logeado != null}">
+                <div class="d-flex nav-item">
+			           <a class="nav-link">Bienvenido, ${usuario_logeado.user_name}</a>
+			           <a class="nav-link" 
+			              href="logout">Cerrar Sesión</a>
+			   </div>
+		        </c:if>
             </div>
-        </div>
+            </div>
     </nav>
+    
+    <p id="mensajeregistro">${mensaje}</p>
+    <p id="mensajeregistro">${mensajelogin}</p>

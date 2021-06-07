@@ -295,16 +295,16 @@ p#terminosycondiciones {
 
 .user_avatar img {
   border-radius: 30%;
+  width: 60%;
 }
 
 .user_name {
   background-color: lightgray;
   grid-column: 2;
-  width: 50%;
+  width: 80%;
   height: 75%;
-  margin-top: 10px;
-  padding: 5px;
-  padding-left: 50px;
+  margin: auto;
+  padding: 25px;
   box-shadow: 4px 4px grey;
 }
 

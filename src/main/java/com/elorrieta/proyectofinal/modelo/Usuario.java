@@ -2,6 +2,13 @@ package com.elorrieta.proyectofinal.modelo;
 
 public class Usuario {
 
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", user_name=" + user_name + ", user_password=" + user_password + ", user_email="
+				+ user_email + ", user_avatar=" + user_avatar + ", rol=" + rol + ", fecha_creacion=" + fecha_creacion
+				+ "]";
+	}
+
 	private int id;
 	private String user_name;
 	private String user_password;

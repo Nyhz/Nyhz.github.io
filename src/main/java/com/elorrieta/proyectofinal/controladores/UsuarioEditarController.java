@@ -1,6 +1,7 @@
 package com.elorrieta.proyectofinal.controladores;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -44,7 +45,7 @@ public class UsuarioEditarController extends HttpServlet {
 		}
 
 		request.setAttribute("titulo", titulo);
-		request.setAttribute("usuarios", u);
+		request.setAttribute("usuario", u);
 		request.getRequestDispatcher("registro.jsp").forward(request, response);
 
 	}
@@ -78,18 +79,22 @@ public class UsuarioEditarController extends HttpServlet {
 				UsuarioDAO.update(u);
 			}
 
+			// LISTADO DE USUARIOS
 			request.setAttribute("mensajeTipo", "primary");
 			request.setAttribute("mensaje", "Datos Guardados");
+			ArrayList<Usuario> usuarios = UsuarioDAO.getAll();
+			request.setAttribute("usuarios", usuarios);
+			request.getRequestDispatcher("panelcontrol.jsp?page=usuarios").forward(request, response);
 
 		} catch (Exception e) {
+
+			// NOS QUEDAMOS EN EL FORMULARIO
 			request.setAttribute("mensajeTipo", "danger");
-			request.setAttribute("mensaje", "El email esta repetido");
+			request.setAttribute("mensaje", "El email o nombre esta repetido");
+			request.setAttribute("usuario", u);
+			request.getRequestDispatcher("registro.jsp").forward(request, response);
 
 		}
-
-		request.setAttribute("titulo", "Modificar Participante");
-		request.setAttribute("usuarios", u);
-		request.getRequestDispatcher("usuarios?page=usuarios").forward(request, response);
 
 	}
 

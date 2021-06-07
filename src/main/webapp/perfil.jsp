@@ -7,14 +7,13 @@
 <main>
     <div class="user_info">
         <div class="user_avatar">
-            <img src="https://randomuser.me/api/portraits/men/79.jpg" alt="Avatar del usuario">
+            <img src="${usuario_logeado.user_avatar}" alt="Avatar del usuario">
         </div>
 
         <div class="user_name">
-            <h2>Bienvenido USERNAME</h2>
-            <p>Email - username@hotmail.com</p>
-            <p>Miembro desde - 28 - 05 - 2021</p>
-            <p></p>
+            <h2>Bienvenido ${usuario_logeado.user_name}</h2>
+            <p>Email - ${usuario_logeado.user_email}</p>
+            <p>Miembro desde - ${usuario_logeado.fecha_creacion}</p>
         </div>
     </div>
 
