@@ -9,19 +9,19 @@
             <div class="formulario_container">
                 <form action="usuario-editar" method="post">
                 
-                    <h1 id="titulo_registro">${ ( usuario.id == null ) ? 'Registro' : 'Editar' }</h1>
+                    <h1 id="titulo_registro">${ ( usuario.id == 0 ) ? 'Registro' : 'Editar' }</h1>
                     
-                    <label for="id">${ ( usuario.id == null ) ? '' : 'ID' }</label>
+                    <label for="id">${ ( usuario.id == 0 ) ? '' : 'ID' }</label>
                     <input class="registroform" 
-                    type="${ ( usuario.id == null ) ? 'hidden' : 'text' }"
+                    type="${ ( usuario.id == 0 ) ? 'hidden' : 'text' }"
                     name="id" 
                     id="id"
                     value="${usuario.id}"
                     readonly>
                     
-                    <label for="rol">${ ( usuario.id == null ) ? '' : 'Rol' }</label><br>
+                    <label for="rol">${ ( usuario.id == 0 ) ? '' : 'Rol' }</label><br>
                     <input class="registroform" 
-                    type="${ ( usuario.id == null ) ? 'hidden' : 'text' }"
+                    type="${ ( usuario.id == 0 ) ? 'hidden' : 'text' }"
                     name="rol" 
                     id="rol"
                     value="${usuario.rol}">

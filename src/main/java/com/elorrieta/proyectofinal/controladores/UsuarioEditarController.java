@@ -35,7 +35,6 @@ public class UsuarioEditarController extends HttpServlet {
 			throws ServletException, IOException {
 
 		int id = Integer.parseInt(request.getParameter("id"));
-
 		Usuario u = new Usuario();
 		String titulo = "Crear Nuevo Usuario";
 
@@ -73,10 +72,10 @@ public class UsuarioEditarController extends HttpServlet {
 		u.setRol(rol);
 
 		try {
-			if (id == 0) {
-				UsuarioDAO.insert(u);
-			} else {
+			if (id != 0) {
 				UsuarioDAO.update(u);
+			} else {
+				UsuarioDAO.insert(u);
 			}
 
 			// LISTADO DE USUARIOS

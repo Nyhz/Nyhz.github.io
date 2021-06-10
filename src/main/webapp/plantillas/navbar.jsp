@@ -14,7 +14,7 @@
                      <!--  VISIBLE SOLO PARA NO REGISTRADOS -->
                     <c:if test="${usuario_logeado == null}">
                     <li class="nav-item">
-                        <a class="nav-link ${ (param.page eq 'registro') ? 'active' : '' }" href="registro.jsp?page=registro">Registro</a>
+                        <a class="nav-link ${ (param.page eq 'registro') ? 'active' : '' }" href="usuario-editar?id=0">Registro</a>
                     </li>
                     </c:if>
                     

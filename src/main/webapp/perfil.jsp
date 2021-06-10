@@ -45,34 +45,12 @@
             <th>Nombre</th>
             <th>Puntuación</th>
           </tr>
-          <tr>
-            <td>Pelicula1</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>Pelicula1</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>Pelicula1</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>Pelicula1</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>Pelicula1</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>Pelicula1</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>Pelicula1</td>
-            <td>10</td>
-          </tr>
+  <c:forEach var="pIteracion" items="${peliculas}">
+      <tr>
+        <td>${pIteracion.multimediaNombre}</td>
+        <td>${pIteracion.multimediaNotaMedia}</td>
+      </tr>
+     </c:forEach>
         </table>
       </div>
     </div>
@@ -102,34 +80,12 @@
           <th>Nombre</th>
           <th>Puntuación</th>
         </tr>
-        <tr>
-          <td>Serie1</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>Serie1</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>Serie1</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>Serie1</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>Serie1</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>Serie1</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>Serie1</td>
-          <td>10</td>
-        </tr>
+  <c:forEach var="pIteracion" items="${series}">
+      <tr>
+        <td>${pIteracion.multimediaNombre}</td>
+        <td>${pIteracion.multimediaNotaMedia}</td>
+      </tr>
+     </c:forEach>
       </table>
     </div>
   </div>

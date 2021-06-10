@@ -397,6 +397,10 @@ img.avatar {
     border-radius: 50%;
 }
 
+#btnbuscar {
+	margin-top: 5px;
+}
+
 /************* FOOTER ***************/
 .container-footer {
   display: grid;

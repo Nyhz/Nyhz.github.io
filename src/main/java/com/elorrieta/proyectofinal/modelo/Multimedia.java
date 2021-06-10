@@ -45,4 +45,10 @@ public class Multimedia {
 		this.multimediaNotaMedia = multimediaNotaMedia;
 	}
 
+	@Override
+	public String toString() {
+		return "Multimedia [id=" + id + ", multimediaNombre=" + multimediaNombre + ", multimediaNotaMedia="
+				+ multimediaNotaMedia + "]";
+	}
+
 }

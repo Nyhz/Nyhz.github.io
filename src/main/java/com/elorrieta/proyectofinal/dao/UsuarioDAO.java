@@ -51,17 +51,17 @@ public class UsuarioDAO {
 	public static boolean insert(Usuario uNuevo) throws Exception {
 
 		boolean resultado = false;
-		String sql = "INSERT INTO usuarios ( user_name, user_email, user_password ) VALUES (?,?,?);";
+		String sql = "INSERT INTO usuarios ( user_name, user_email, user_password, user_avatar ) VALUES (?,?,?,?);";
 
 		try (Connection con = ConnectionHelper.getConnection(); PreparedStatement pst = con.prepareStatement(sql);) {
-			// sustituir ? por valores del pNuevo
+
 			pst.setString(1, uNuevo.getUser_name());
 			pst.setString(2, uNuevo.getUser_email());
 			pst.setString(3, uNuevo.getUser_password());
+			pst.setString(4, uNuevo.getUser_avatar());
 
-			// ejecuta la INSERT
 			int affectedRows = pst.executeUpdate();
-			// comprobamos que se ha insertado una fila
+
 			if (affectedRows == 1) {
 				resultado = true;
 			}

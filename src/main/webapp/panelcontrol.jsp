@@ -12,7 +12,7 @@
               name="filtro"
               value="${filtro}"
               placeholder="Introduce username / email">   
-       	<input type="submit" value="Buscar">
+       	<input id="btnbuscar" type="submit" value="Buscar">
 	</form>
    	</div>
    
