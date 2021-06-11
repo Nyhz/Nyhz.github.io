@@ -412,6 +412,21 @@ img.avatar {
   border-bottom: 4px solid black;
 }
 
+.container-footer-valorar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 100%;
+  margin-top: 10px;
+  background-color: #04AA6D;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+	
+}
+
 .info {
   grid-column: 1;
   padding-left: 15px;

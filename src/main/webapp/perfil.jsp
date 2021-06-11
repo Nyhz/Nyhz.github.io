@@ -44,11 +44,13 @@
           <tr>
             <th>Nombre</th>
             <th>Puntuación</th>
+            <th>Editar puntuación</th>
           </tr>
   <c:forEach var="pIteracion" items="${peliculas}">
       <tr>
         <td>${pIteracion.multimediaNombre}</td>
         <td>${pIteracion.multimediaNotaMedia}</td>
+        <td><a href="valoracion-editar?id_multimedia=${pIteracion.id}"><i class="fas fa-edit"></i></a></td>
       </tr>
      </c:forEach>
         </table>
@@ -60,14 +62,14 @@
         <h3>Valora una serie:</h3>
         <form action="#">
           <label for="tituloserie">Título de la serie:</label><br>
-          <input type="text" id="tituloserie" name="titulopelicula" required><br>
+          <input type="text" id="tituloserie" name="tituloserie" required><br>
           <label for="puntuacionserie">Elige una puntuación del 0 al 10:</label><br><br>
           <input type="range" id="puntuacionserie" 
           name="rangeInput" min="0" max="10" value="5" step="1"
-          oninput="amount2.value=rangeInput.value">
-          <output name="amount2" id="amount2" for="rangeInput">5</output><br><br><br>
+          oninput="amount.value=rangeInput.value">
+          <output name="amount" id="amount" for="rangeInput">5</output><br><br><br>
           <label for="comentarioserie">Comentario (opcional)</label><br>
-          <input type="text" id="comentarioserie" name="comentariopelicula" maxlength="100" placeholder="Máximo 100 caracteres"><br>
+          <input type="text" id="comentarioserie" name="comentarioserie" maxlength="100" placeholder="Máximo 100 caracteres"><br>
           <input type="submit" value="Enviar">
         </form>
       </div>
@@ -79,11 +81,13 @@
         <tr>
           <th>Nombre</th>
           <th>Puntuación</th>
+          <th>Editar puntuación</th>
         </tr>
   <c:forEach var="pIteracion" items="${series}">
       <tr>
         <td>${pIteracion.multimediaNombre}</td>
         <td>${pIteracion.multimediaNotaMedia}</td>
+        <td><a href="valoracion-editar?id_multimedia=${pIteracion.id}"><i class="fas fa-edit"></i></a></td>
       </tr>
      </c:forEach>
       </table>

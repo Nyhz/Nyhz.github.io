@@ -20,7 +20,7 @@ public class PerfilDAO {
 	public static ArrayList<Multimedia> getMultimedia(int idUsuario, int idTipo) {
 
 		ArrayList<Multimedia> coleccion = new ArrayList<Multimedia>();
-		String sql = "SELECT multimedia.nombre as 'nombre', puntuacion FROM puntuaciones INNER JOIN multimedia ON puntuaciones.id_multimedia = multimedia.id WHERE id_usuario = ? and id_tipo = ? ORDER BY puntuacion  DESC LIMIT 10; ";
+		String sql = "SELECT multimedia.id as id_multi, multimedia.nombre as 'nombre', puntuacion FROM puntuaciones INNER JOIN multimedia ON puntuaciones.id_multimedia = multimedia.id WHERE id_usuario = ? and id_tipo = ? ORDER BY puntuacion  DESC LIMIT 10; ";
 		try (
 
 				Connection con = ConnectionHelper.getConnection();
@@ -36,6 +36,7 @@ public class PerfilDAO {
 
 					Multimedia p = new Multimedia();
 
+					p.setId(rs.getInt("id_multi"));
 					p.setMultimediaNombre(rs.getString("nombre"));
 					p.setMultimediaNotaMedia(rs.getInt("puntuacion"));
 
