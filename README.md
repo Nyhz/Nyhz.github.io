@@ -36,9 +36,9 @@ Al ser un proyecto web necesitamos un servidor de aplicaciones, en nuestro caso 
 Podemos navegar por la pantalla inicial y disponer de todos los datos. Si queremos entrar al perfil o al panel de control necesitaremos estar logeados.
 Tenemos dos roles diferentes de usuario.
 - Administrador -> user: admin / password: admin
-![panel_control}( panelcontrol.JPG?raw=true)
+![panel_control]( panelcontrol.JPG?raw=true)
 - Usuario normal -> user: user01 / password: user01
-![perfil}( perfil.JPG?raw=true)
+![perfil]( perfil.JPG?raw=true)
 
 ## Estructura Clases del proyecto
 
