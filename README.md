@@ -36,7 +36,9 @@ Al ser un proyecto web necesitamos un servidor de aplicaciones, en nuestro caso 
 Podemos navegar por la pantalla inicial y disponer de todos los datos. Si queremos entrar al perfil o al panel de control necesitaremos estar logeados.
 Tenemos dos roles diferentes de usuario.
 - Administrador -> user: admin / password: admin
+![panel_control}( panelcontrol.JPG?raw=true)
 - Usuario normal -> user: user01 / password: user01
+![perfil}( perfil.JPG?raw=true)
 
 ## Estructura Clases del proyecto
 
@@ -48,4 +50,4 @@ Model Vista Controlador
 - **modelo** Los DAOs se encargan de conectar Java con la bbdd son los encargados de las consultas SQL `src/main/java/com/elorrieta/proyectofinal/modelo`
 - **controlador** Controladores o Servlets `src/main/java/com/elorrieta/proyectofinal/controladores`
 
-![estructura proyecto]( estructura.jpg?raw=true)
+![estructura proyecto]( estructura.JPG?raw=true)
