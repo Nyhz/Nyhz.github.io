@@ -11,7 +11,7 @@
                         <a class="nav-link ${ (param.page eq 'index') ? 'active' : '' }" aria-current="page" href="index?page=index">Home</a>
                     </li>
                     
-                     <!--  VISIBLE SOLO PARA NO REGISTRADOs -->
+                     <!--  VISIBLE SOLO PARA NO REGISTRADOS -->
                     <c:if test="${usuario_logeado == null}">
                     <li class="nav-item">
                         <a class="nav-link ${ (param.page eq 'registro') ? 'active' : '' }" href="usuario-editar?id=0">Registro</a>
