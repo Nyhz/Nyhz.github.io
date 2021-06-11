@@ -72,7 +72,7 @@
 
 					<p id="mensajeregistro">${mensaje}</p>
                     <p id="terminosycondiciones">Al crear tu cuenta aceptas nuestros <a href="#">Términos y condiciones</a>.</p>
-                    <button type="submit" id="submit" class="boton_registro">${ ( usuario.id == null ) ? 'Registro' : 'Editar' }</button>
+                    <button type="submit" id="submit" class="boton_registro">${ ( usuario.id == 0 ) ? 'Registro' : 'Editar' }</button>
                 </form>
 
                 <div class="login_container">

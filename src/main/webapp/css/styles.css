@@ -34,6 +34,14 @@ html {
 
 /************************** NAVBAR **************************/
 
+.nav-link {
+	color: white;
+}
+
+.nav-link:hover {
+	color: grey;
+}
+
 
 /************* TABLAS ***************/
 
@@ -436,6 +444,7 @@ img.avatar {
   grid-column: 2;
   text-decoration: none;
   padding-bottom: 15px;
+  margin-right: 5px;
   text-align: center;
   
 }

@@ -46,8 +46,6 @@ public class ValoracionDAO {
 			pst.setInt(2, v.getId_multimedia());
 			pst.setInt(3, v.getId_usuario());
 
-			System.out.println(pst);
-
 			if (pst.executeUpdate() == 1) {
 				modificado = true;
 			}
