@@ -15,7 +15,7 @@
        	<input id="btnbuscar" type="submit" value="Buscar">
 	</form>
    	</div>
-   
+   	
     <div class="table-responsive-lg">
         <table class="tabla_usuarios">
             <caption>Lista de usuarios</caption>

@@ -35,13 +35,12 @@ public class UsuarioFiltrarController extends HttpServlet {
 			throws ServletException, IOException {
 
 		String filtro = request.getParameter("filtro");
-		String mensaje = "";
 		ArrayList<Usuario> lista1 = UsuarioDAO.getAllByName(filtro);
 		if (filtro != null) {
 
 			// enviar atributos para pintar
 			request.setAttribute("usuarios", lista1);
-			request.setAttribute(mensaje, "Has buscado " + filtro + "");
+			request.setAttribute("mensaje", "Has buscado " + filtro + "");
 			request.setAttribute("filtro", filtro);
 
 			// ir a la vista
