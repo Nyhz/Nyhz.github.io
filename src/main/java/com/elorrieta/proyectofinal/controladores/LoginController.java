@@ -43,7 +43,7 @@ public class LoginController extends HttpServlet {
 			session.setMaxInactiveInterval(300); // 5 min
 
 			request.setAttribute("nombreusuario", nombreLogin);
-			request.getRequestDispatcher("perfil").forward(request, response);
+			request.getRequestDispatcher("perfil.jsp").forward(request, response);
 
 		} else {
 

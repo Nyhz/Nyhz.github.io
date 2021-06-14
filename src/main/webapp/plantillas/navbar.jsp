@@ -38,8 +38,8 @@
                 
                 <c:if test="${usuario_logeado == null}">
                 <form class="d-flex" action="login" method="post">
-                    <input class="form-control me-2" type="text" name="user_name" value="user01" id="user_name" placeholder="Username" />
-                    <input class="form-control me-2" type="password" name="user_password" value="user01" id="user_name" placeholder="Password" />
+                    <input class="form-control me-2" type="text" name="user_name" id="user_name" placeholder="Username" />
+                    <input class="form-control me-2" type="password" name="user_password" id="user_name" placeholder="Password" />
                     <button class="btn btn-light" type="submit">Login</button>
                 </form>
                 </c:if>

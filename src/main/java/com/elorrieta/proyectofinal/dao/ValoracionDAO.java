@@ -52,4 +52,22 @@ public class ValoracionDAO {
 		}
 		return modificado;
 	}
+
+	public static boolean insert(Valoracion v) throws Exception {
+		boolean insertado = false;
+
+		String sql = "INSERT INTO puntuaciones VALUES (?,?,?,?);";
+		try (Connection con = ConnectionHelper.getConnection(); PreparedStatement pst = con.prepareStatement(sql)) {
+
+			pst.setInt(1, v.getId_multimedia());
+			pst.setInt(2, v.getId_usuario());
+			pst.setInt(3, v.getPuntuacion());
+			pst.setString(4, v.getComentario());
+
+			if (pst.executeUpdate() == 1) {
+				insertado = true;
+			}
+		}
+		return insertado;
+	}
 }

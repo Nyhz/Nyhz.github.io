@@ -24,16 +24,24 @@
     <div id="Home" class="tabcontent">
       <div class="valorar_peliculas">
         <h3>Valora una película:</h3>
-        <form action="#">
-          <label for="titulopelicula">Título de la película:</label><br>
-          <input type="text" id="titulopelicula" name="titulopelicula" required><br>
+        <form action="perfil" method="post">
+        <label for="listapeliculas">Título de la película</label>
+        <br>
+		<select id="listapeliculas" name="id">
+			<c:forEach var="pIteracion" items="${listapeliculas}">
+		 		<option value="${pIteracion.id}">${pIteracion.multimediaNombre}</option>
+		  	</c:forEach>
+		</select>
+		<br>
+		<br>
+          
           <label for="puntuacionpelicula">Elige una puntuación del 0 al 10:</label><br><br>
           <input type="range" id="puntuacionpelicula" 
-          name="rangeInput" min="0" max="10" value="5" step="1"
-          oninput="amount.value=rangeInput.value">
-          <output name="amount" id="amount" for="rangeInput">5</output><br><br><br>
+          name="puntuacion" min="0" max="10" value="5" step="1"
+          oninput="amount.value=puntuacion.value">
+          <output name="amount" id="amount" for="puntuacion">5</output><br><br><br>
           <label for="comentariopelicula">Comentario (opcional)</label><br>
-          <input type="text" id="comentariopelicula" name="comentariopelicula" maxlength="100" placeholder="Máximo 100 caracteres"><br>
+          <input type="text" id="comentariopelicula" name="comentario" maxlength="100" placeholder="Máximo 100 caracteres"><br>
           <input type="submit" value="Enviar">
         </form>
       </div>
@@ -60,19 +68,26 @@
     <div id="News" class="tabcontent">
       <div class="valorar_series">
         <h3>Valora una serie:</h3>
-        <form action="#">
-          <label for="tituloserie">Título de la serie:</label><br>
-          <input type="text" id="tituloserie" name="tituloserie" required><br>
-          <label for="puntuacionserie">Elige una puntuación del 0 al 10:</label><br><br>
-          <input type="range" id="puntuacionserie" 
-          name="rangeInput" min="0" max="10" value="5" step="1"
-          oninput="amount.value=rangeInput.value">
-          <output name="amount" id="amount" for="rangeInput">5</output><br><br><br>
-          <label for="comentarioserie">Comentario (opcional)</label><br>
-          <input type="text" id="comentarioserie" name="comentarioserie" maxlength="100" placeholder="Máximo 100 caracteres"><br>
-          <input type="submit" value="Enviar">
-        </form>
-      </div>
+        <form action="perfil" method="post">
+        <label for="listaseries">Título de la serie</label>
+        <br>
+		<select id="listaseries" name="id">
+			<c:forEach var="pIteracion" items="${listaseries}">
+		 		<option value="${pIteracion.id}">${pIteracion.multimediaNombre}</option>
+		  	</c:forEach>
+		</select>
+		<br>
+		<br>
+         <label for="puntuacionserie">Elige una puntuación del 0 al 10:</label><br><br>
+         <input type="range" id="puntuacionserie" 
+         name="puntuacion" min="0" max="10" value="5" step="1"
+         oninput="amount.value=puntuacion.value">
+         <output name="amount" id="amount" for="puntuacion">5</output><br><br><br>
+         <label for="comentarioserie">Comentario (opcional)</label><br>
+         <input type="text" id="comentarioserie" name="comentario" maxlength="100" placeholder="Máximo 100 caracteres"><br>
+         <input type="submit" value="Enviar">
+       </form>
+     </div>
 
 
       <div class="series_container">
