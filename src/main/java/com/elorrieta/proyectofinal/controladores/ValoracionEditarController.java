@@ -82,7 +82,7 @@ public class ValoracionEditarController extends HttpServlet {
 		// NOS QUEDAMOS EN EL PEFIL
 
 		request.setAttribute("valoracion", v);
-		request.getRequestDispatcher("perfil").forward(request, response);
+		request.getRequestDispatcher("perfil.jsp").forward(request, response);
 
 	}
 
