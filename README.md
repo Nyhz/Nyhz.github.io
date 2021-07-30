@@ -1,4 +1,5 @@
-# Proyecto Final
+# Addicted!
+
 Proyecto Web **Java EE** contra una BDD **SQLITE** con un CMS para gestionar a los diferentes usuarios.
 
 ## Tecnología
