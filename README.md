@@ -11,7 +11,7 @@ Proyecto Web **Java EE** contra una BDD **SQLITE** con un CMS para gestionar a l
 - Bootstrap 5.0.0
 - FontAwesome 5.15.3
 
-Para ver mas detalles sobre las depencias (jars) de este proyecto mirar el [pom.xml](https://github.com/Nyhz/Nyhz.github.io/blob/master/pom.xml)
+Para conocer más detalles sobre las depencias de este proyecto, recomiendo mirar el [pom.xml](https://github.com/Nyhz/Nyhz.github.io/blob/master/pom.xml)
 
 ## Instalación del proyecto
 
